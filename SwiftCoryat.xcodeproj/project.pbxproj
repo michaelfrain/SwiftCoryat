@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3BAA192197F1C470088E315 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BAA191197F1C470088E315 /* ResultController.swift */; };
 		F6438AC9197DF99200650195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6438AC8197DF99200650195 /* AppDelegate.swift */; };
-		F6438ACB197DF99200650195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6438ACA197DF99200650195 /* ViewController.swift */; };
 		F6438ACE197DF99200650195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6438ACC197DF99200650195 /* Main.storyboard */; };
 		F6438AD0197DF99200650195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6438ACF197DF99200650195 /* Images.xcassets */; };
 		F6438ADC197DF99200650195 /* SwiftCoryatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6438ADB197DF99200650195 /* SwiftCoryatTests.swift */; };
+		F6438AE6197DFAD700650195 /* GameBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6438AE5197DFAD700650195 /* GameBoardController.swift */; };
+		F6438AE8197DFB6500650195 /* GameBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6438AE7197DFB6500650195 /* GameBoardCell.swift */; };
+		F646B5571981D61C00471B81 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B5561981D61C00471B81 /* GameStatus.swift */; };
+		F646B5591981E7F800471B81 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B5581981E7F800471B81 /* CategoryController.swift */; };
+		F646B55B1981FAC400471B81 /* FinalJeopardyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B55A1981FAC400471B81 /* FinalJeopardyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +30,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3BAA191197F1C470088E315 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		F6438AC3197DF99200650195 /* SwiftCoryat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoryat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6438AC7197DF99200650195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6438AC8197DF99200650195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6438ACA197DF99200650195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6438ACD197DF99200650195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6438ACF197DF99200650195 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F6438AD5197DF99200650195 /* SwiftCoryatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCoryatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6438ADA197DF99200650195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6438ADB197DF99200650195 /* SwiftCoryatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCoryatTests.swift; sourceTree = "<group>"; };
+		F6438AE5197DFAD700650195 /* GameBoardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardController.swift; sourceTree = "<group>"; };
+		F6438AE7197DFB6500650195 /* GameBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardCell.swift; sourceTree = "<group>"; };
+		F646B5561981D61C00471B81 /* GameStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
+		F646B5581981E7F800471B81 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		F646B55A1981FAC400471B81 /* FinalJeopardyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalJeopardyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +85,10 @@
 		F6438AC5197DF99200650195 /* SwiftCoryat */ = {
 			isa = PBXGroup;
 			children = (
+				F646B5551981D59200471B81 /* Models */,
+				F646B5541981D58C00471B81 /* Controllers */,
+				F646B5531981D58600471B81 /* Views */,
 				F6438AC8197DF99200650195 /* AppDelegate.swift */,
-				F6438ACA197DF99200650195 /* ViewController.swift */,
 				F6438ACC197DF99200650195 /* Main.storyboard */,
 				F6438ACF197DF99200650195 /* Images.xcassets */,
 				F6438AC6197DF99200650195 /* Supporting Files */,
@@ -107,6 +119,33 @@
 				F6438ADA197DF99200650195 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F646B5531981D58600471B81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6438AE7197DFB6500650195 /* GameBoardCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F646B5541981D58C00471B81 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6438AE5197DFAD700650195 /* GameBoardController.swift */,
+				D3BAA191197F1C470088E315 /* ResultController.swift */,
+				F646B5581981E7F800471B81 /* CategoryController.swift */,
+				F646B55A1981FAC400471B81 /* FinalJeopardyController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F646B5551981D59200471B81 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F646B5561981D61C00471B81 /* GameStatus.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6438ACB197DF99200650195 /* ViewController.swift in Sources */,
+				D3BAA192197F1C470088E315 /* ResultController.swift in Sources */,
+				F6438AE6197DFAD700650195 /* GameBoardController.swift in Sources */,
+				F646B5571981D61C00471B81 /* GameStatus.swift in Sources */,
 				F6438AC9197DF99200650195 /* AppDelegate.swift in Sources */,
+				F6438AE8197DFB6500650195 /* GameBoardCell.swift in Sources */,
+				F646B55B1981FAC400471B81 /* FinalJeopardyController.swift in Sources */,
+				F646B5591981E7F800471B81 /* CategoryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +441,7 @@
 				F6438AE1197DF99200650195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6438AE2197DF99200650195 /* Build configuration list for PBXNativeTarget "SwiftCoryatTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +450,7 @@
 				F6438AE4197DF99200650195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
