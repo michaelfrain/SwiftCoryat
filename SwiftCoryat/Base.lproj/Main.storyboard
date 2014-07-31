@@ -162,6 +162,8 @@
                             <constraint firstItem="c2d-wg-nDY" firstAttribute="leading" secondItem="wDV-bK-a9m" secondAttribute="trailing" constant="8" id="y7h-OB-et1"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="cat1TextField" destination="c2d-wg-nDY" id="3nJ-Ub-LLo"/>
                         <outlet property="cat2TextField" destination="TbR-w4-b9y" id="nKO-LE-ziT"/>
@@ -253,7 +255,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1150754905" green="0.034277653370000001" blue="0.83727496599999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="qmq-fF-wKa" firstAttribute="top" secondItem="t2l-SX-ltL" secondAttribute="bottom" constant="-20" id="8mz-z4-EIf"/>
+                            <constraint firstItem="qmq-fF-wKa" firstAttribute="top" secondItem="t2l-SX-ltL" secondAttribute="bottom" id="8mz-z4-EIf"/>
                             <constraint firstAttribute="trailing" secondItem="50F-fq-iyM" secondAttribute="trailing" constant="20" id="DrU-O8-3XW"/>
                             <constraint firstItem="1vR-t6-U5t" firstAttribute="top" secondItem="dZJ-h8-fM4" secondAttribute="bottom" constant="8" id="JOF-M6-4LJ"/>
                             <constraint firstItem="dZJ-h8-fM4" firstAttribute="leading" secondItem="fEI-LY-tt6" secondAttribute="leading" constant="20" id="VxI-Je-YGp"/>

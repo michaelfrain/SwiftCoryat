@@ -31,17 +31,17 @@ class CategoryController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField!) {
         switch textField {
         case cat1TextField:
-            categoryArray[0] = cat1TextField.text
+            categoryArray[0] = cat1TextField.text.capitalizedString
         case cat2TextField:
-            categoryArray[1] = cat2TextField.text
+            categoryArray[1] = cat2TextField.text.capitalizedString
         case cat3TextField:
-            categoryArray[2] = cat3TextField.text
+            categoryArray[2] = cat3TextField.text.capitalizedString
         case cat4TextField:
-            categoryArray[3] = cat4TextField.text
+            categoryArray[3] = cat4TextField.text.capitalizedString
         case cat5TextField:
-            categoryArray[4] = cat5TextField.text
+            categoryArray[4] = cat5TextField.text.capitalizedString
         case cat6TextField:
-            categoryArray[5] = cat6TextField.text
+            categoryArray[5] = cat6TextField.text.capitalizedString
         default:
             return
         }
