@@ -18,7 +18,7 @@ class GameBoardController: UIViewController, UICollectionViewDataSource, UIColle
     var roundNumber = 1
     var selectedCell: NSIndexPath!
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         categoryArray = []
         super.init(coder: aDecoder)
     }

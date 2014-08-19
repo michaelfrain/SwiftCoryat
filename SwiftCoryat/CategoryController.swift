@@ -19,8 +19,17 @@ class CategoryController: UIViewController, UITextFieldDelegate {
     var isRound2 = false
     var gameStatus = GameStatus()
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        cat1TextField.text = ""
+        cat2TextField.text = ""
+        cat3TextField.text = ""
+        cat4TextField.text = ""
+        cat5TextField.text = ""
+        cat6TextField.text = ""
     }
     
     var categoryArray = ["A", "B", "C", "D", "E", "F"]

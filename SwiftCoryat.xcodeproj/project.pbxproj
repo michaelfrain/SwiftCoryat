@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3A3833519A41931005D9776 /* GameTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A3833419A41931005D9776 /* GameTypeController.swift */; };
 		D3BAA192197F1C470088E315 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BAA191197F1C470088E315 /* ResultController.swift */; };
+		D3FE539C198D61730097DC05 /* FrontPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE539B198D61730097DC05 /* FrontPageController.swift */; };
+		D3FE539E198D639E0097DC05 /* DateSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FE539D198D639E0097DC05 /* DateSelectionController.swift */; };
 		F6438AC9197DF99200650195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6438AC8197DF99200650195 /* AppDelegate.swift */; };
 		F6438ACE197DF99200650195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6438ACC197DF99200650195 /* Main.storyboard */; };
 		F6438AD0197DF99200650195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6438ACF197DF99200650195 /* Images.xcassets */; };
@@ -30,7 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3A3833419A41931005D9776 /* GameTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTypeController.swift; sourceTree = "<group>"; };
 		D3BAA191197F1C470088E315 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		D3FE539B198D61730097DC05 /* FrontPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageController.swift; sourceTree = "<group>"; };
+		D3FE539D198D639E0097DC05 /* DateSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectionController.swift; sourceTree = "<group>"; };
 		F6438AC3197DF99200650195 /* SwiftCoryat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoryat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6438AC7197DF99200650195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6438AC8197DF99200650195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				D3BAA191197F1C470088E315 /* ResultController.swift */,
 				F646B5581981E7F800471B81 /* CategoryController.swift */,
 				F646B55A1981FAC400471B81 /* FinalJeopardyController.swift */,
+				D3FE539B198D61730097DC05 /* FrontPageController.swift */,
+				D3FE539D198D639E0097DC05 /* DateSelectionController.swift */,
+				D3A3833419A41931005D9776 /* GameTypeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -248,11 +257,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3BAA192197F1C470088E315 /* ResultController.swift in Sources */,
+				D3A3833519A41931005D9776 /* GameTypeController.swift in Sources */,
 				F6438AE6197DFAD700650195 /* GameBoardController.swift in Sources */,
 				F646B5571981D61C00471B81 /* GameStatus.swift in Sources */,
+				D3FE539E198D639E0097DC05 /* DateSelectionController.swift in Sources */,
 				F6438AC9197DF99200650195 /* AppDelegate.swift in Sources */,
 				F6438AE8197DFB6500650195 /* GameBoardCell.swift in Sources */,
 				F646B55B1981FAC400471B81 /* FinalJeopardyController.swift in Sources */,
+				D3FE539C198D61730097DC05 /* FrontPageController.swift in Sources */,
 				F646B5591981E7F800471B81 /* CategoryController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
