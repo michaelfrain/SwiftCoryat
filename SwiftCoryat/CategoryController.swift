@@ -76,7 +76,7 @@ class CategoryController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "BeginGameSegue" {
             var gameBoardController = segue.destinationViewController as GameBoardController
             gameBoardController.categoryArray = categoryArray

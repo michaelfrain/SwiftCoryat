@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6al-KX-LNA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6al-KX-LNA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Date Selection Controller-->
@@ -50,30 +51,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jeopardy! Coryat Scorekeeper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Z-N1-N0R">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeopardy! Coryat Scorekeeper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Z-N1-N0R">
                                 <rect key="frame" x="117" y="20" width="366" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shv-ea-7NK">
-                                <rect key="frame" x="20" y="78" width="144" height="35"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shv-ea-7NK">
+                                <rect key="frame" x="20" y="77" width="144" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Lv-0H-wiy">
-                                <rect key="frame" x="237" y="72" width="343" height="47"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Thursday, January 15, 2014">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="30" name="HelveticaNeue-UltraLight"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lv-0H-wiy">
+                                <rect key="frame" x="237" y="71" width="343" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Thursday, January 15, 2014">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="y7x-3t-iRx" kind="popoverPresentation" popoverAnchorView="7Lv-0H-wiy" id="t5W-Eb-hXQ">
@@ -81,24 +75,17 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3r-5Q-6Uv">
-                                <rect key="frame" x="20" y="137" width="142" height="35"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3r-5Q-6Uv">
+                                <rect key="frame" x="20" y="136" width="142" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-g1-Qx8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-g1-Qx8">
                                 <rect key="frame" x="237" y="131" width="145" height="47"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Regular play">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="HelveticaNeue-UltraLight"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Regular play">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="YPR-q5-18i" kind="popoverPresentation" popoverAnchorView="bBW-g1-Qx8" id="69u-uq-2JN">
@@ -106,8 +93,35 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inw-sz-hkA">
+                                <rect key="frame" x="254" y="203" width="93" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WY2-nD-whv" kind="presentation" id="ww4-E2-1et"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.047058823530000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bBW-g1-Qx8" secondAttribute="trailing" constant="202" id="3DZ-bx-5aN"/>
+                            <constraint firstItem="L5Z-N1-N0R" firstAttribute="top" secondItem="RQg-2Z-NAL" secondAttribute="bottom" id="3PE-sZ-rZM"/>
+                            <constraint firstAttribute="centerX" secondItem="Inw-sz-hkA" secondAttribute="centerX" constant="-0.5" id="9MJ-z5-o5G"/>
+                            <constraint firstAttribute="centerX" secondItem="L5Z-N1-N0R" secondAttribute="centerX" id="COc-4a-hB3"/>
+                            <constraint firstItem="Shv-ea-7NK" firstAttribute="top" secondItem="L5Z-N1-N0R" secondAttribute="bottom" constant="23" id="Wq5-36-nYM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Lv-0H-wiy" secondAttribute="trailing" constant="4" id="gFC-qX-l4d"/>
+                            <constraint firstItem="bBW-g1-Qx8" firstAttribute="leading" secondItem="s3r-5Q-6Uv" secondAttribute="trailing" constant="75" id="jH4-Jb-cAf"/>
+                            <constraint firstItem="Inw-sz-hkA" firstAttribute="top" secondItem="bBW-g1-Qx8" secondAttribute="bottom" constant="25" id="kcf-ch-nI3"/>
+                            <constraint firstItem="s3r-5Q-6Uv" firstAttribute="top" secondItem="Shv-ea-7NK" secondAttribute="bottom" constant="24" id="mJv-7N-K84"/>
+                            <constraint firstItem="7Lv-0H-wiy" firstAttribute="centerY" secondItem="Shv-ea-7NK" secondAttribute="centerY" id="oDJ-iQ-BGL"/>
+                            <constraint firstItem="Shv-ea-7NK" firstAttribute="leading" secondItem="OcA-So-xB5" secondAttribute="leadingMargin" constant="4" id="rQD-1u-XMD"/>
+                            <constraint firstItem="bBW-g1-Qx8" firstAttribute="centerY" secondItem="s3r-5Q-6Uv" secondAttribute="centerY" constant="1" id="sZT-pC-w5E"/>
+                            <constraint firstItem="7Lv-0H-wiy" firstAttribute="leading" secondItem="Shv-ea-7NK" secondAttribute="trailing" constant="73" id="tHx-Bk-kkh"/>
+                            <constraint firstItem="Shv-ea-7NK" firstAttribute="leading" secondItem="s3r-5Q-6Uv" secondAttribute="leading" id="yp4-U3-quk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dateButton" destination="7Lv-0H-wiy" id="9EJ-3r-djd"/>

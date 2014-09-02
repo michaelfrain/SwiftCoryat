@@ -81,7 +81,7 @@ class ResultController: UIViewController {
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "UnwindConfirmedClueSegue" {
             if clueResultSegmentedControl!.selectedSegmentIndex == -1 {
                 let alert = UIAlertController(title: "Wait!", message: "You have to select an outcome of the current clue, or cancel.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -96,7 +96,7 @@ class ResultController: UIViewController {
         return true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "UnwindConfirmedClueSegue" {
             switch clueResultSegmentedControl!.selectedSegmentIndex {
             case 0:

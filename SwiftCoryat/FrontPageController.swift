@@ -17,9 +17,9 @@ class FrontPageController: UIViewController {
         super.viewDidLoad()
         let today = NSDate()
         let formatter = NSDateFormatter()
+        formatter.dateFormat = "MMMM dd, YYYY"
         let dateString = formatter.stringFromDate(today)
-        let attributedString = NSAttributedString(string: dateString, attributes: [NSFontAttributeName: UIFont(name: "HelveticaNeue-UltraLight", size: 30.0)])
-        dateButton.setAttributedTitle(attributedString, forState: UIControlState.Normal)
-        dateButton.titleLabel.textColor = UIColor.whiteColor()
+        dateButton.setTitle(dateString, forState: .Normal)
+        dateButton.titleLabel!.textColor = UIColor.whiteColor()
     }
 }

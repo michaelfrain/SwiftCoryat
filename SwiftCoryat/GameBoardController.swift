@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GameBoardController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class GameBoardController: UIViewController, UICollectionViewDelegate {
     var gameStatus = GameStatus()
     @IBOutlet var gameBoard: UICollectionView!
     @IBOutlet var endRound: UIButton!
@@ -31,18 +31,17 @@ class GameBoardController: UIViewController, UICollectionViewDataSource, UIColle
         } else {
             endRound.setTitle("End Round 2", forState: UIControlState.Normal)
         }
-        var defaultCenter = NSNotificationCenter.defaultCenter()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 36
     }
     
-    func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell {
         var cellValueString: String
         if roundNumber == 1 {
             switch indexPath.item {
@@ -127,7 +126,7 @@ class GameBoardController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "UnwindRoundSegue" && roundNumber == 2 {
             return false
         } else if identifier == "FinalJeopardySegue" && roundNumber == 1 {
@@ -136,7 +135,7 @@ class GameBoardController: UIViewController, UICollectionViewDataSource, UIColle
         return true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "CellSelectionSegue" {
             var destinationController: ResultController = segue.destinationViewController as ResultController
             destinationController.gameStatus = self.gameStatus
