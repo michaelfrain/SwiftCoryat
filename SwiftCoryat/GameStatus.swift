@@ -21,4 +21,6 @@ class GameStatus {
     var lachTrashPickedUp: Int = 0
     var slowReluctantRight: Int = 0
     var slowReluctantNoAnswer: Int = 0
+    
+    var finalJeopardyCorrect: Bool = true
 }

@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class FinalJeopardyController: UIViewController {
-    @IBOutlet var questionRecord: UILabel!
-    @IBOutlet var coryatScore: UILabel!
-    @IBOutlet var dailyDoubleRecord: UILabel!
-    @IBOutlet var lachTrashScore: UILabel!
     var finalStatus = GameStatus()
+    @IBOutlet var responseField: UITextField!
+    @IBOutlet var lockButton: UIButton!
+    @IBOutlet var correctResponseButton: UIButton!
+    @IBOutlet var incorrectResponseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,32 @@ class FinalJeopardyController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        questionRecord.text = "Question record: \(finalStatus.correctResponses)/\(finalStatus.incorrectResponses)/\(finalStatus.nonResponses)"
-        coryatScore.text = "Coryat Score: \(finalStatus.currentScore)"
-        dailyDoubleRecord.text = "Daily Double record: \(finalStatus.dailyDoubleRight)/\(finalStatus.dailyDoubleWrong)"
-        lachTrashScore.text = "Lach Trash picked up: \(finalStatus.lachTrashPickedUp)"
+    }
+    
+    @IBAction func lockAnswer(sender: UIButton) {
+        let alert = UIAlertController(title: "Wait!", message: "Once you lock your response, you cannot reverse this. Are you sure?", preferredStyle: .Alert)
+        let confirm = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.Default, handler:{
+            self.responseField.enabled = false
+            self.lockButton.enabled = false
+            self.lockButton.setTitle("Response Locked", forState: UIControlState.Disabled)
+            return nil
+        }())
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func setResponseValue(sender: UIButton) {
+        if sender == self.correctResponseButton {
+            finalStatus.finalJeopardyCorrect = true
+        } else if sender == self.incorrectResponseButton {
+            finalStatus.finalJeopardyCorrect = false
+        }
+        self.performSegueWithIdentifier("GameSummarySegue", sender: sender)
+    }
+    
+    override func performSegueWithIdentifier(identifier: String, sender: AnyObject?) {
+        
     }
 }

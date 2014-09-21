@@ -20,6 +20,7 @@
 		F646B5571981D61C00471B81 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B5561981D61C00471B81 /* GameStatus.swift */; };
 		F646B5591981E7F800471B81 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B5581981E7F800471B81 /* CategoryController.swift */; };
 		F646B55B1981FAC400471B81 /* FinalJeopardyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F646B55A1981FAC400471B81 /* FinalJeopardyController.swift */; };
+		F68F7E5A19CF7B76001601B7 /* GameSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F7E5919CF7B76001601B7 /* GameSummaryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F646B5561981D61C00471B81 /* GameStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		F646B5581981E7F800471B81 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		F646B55A1981FAC400471B81 /* FinalJeopardyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalJeopardyController.swift; sourceTree = "<group>"; };
+		F68F7E5919CF7B76001601B7 /* GameSummaryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSummaryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				D3FE539B198D61730097DC05 /* FrontPageController.swift */,
 				D3FE539D198D639E0097DC05 /* DateSelectionController.swift */,
 				D3A3833419A41931005D9776 /* GameTypeController.swift */,
+				F68F7E5919CF7B76001601B7 /* GameSummaryController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				F6438AC9197DF99200650195 /* AppDelegate.swift in Sources */,
 				F6438AE8197DFB6500650195 /* GameBoardCell.swift in Sources */,
 				F646B55B1981FAC400471B81 /* FinalJeopardyController.swift in Sources */,
+				F68F7E5A19CF7B76001601B7 /* GameSummaryController.swift in Sources */,
 				D3FE539C198D61730097DC05 /* FrontPageController.swift in Sources */,
 				F646B5591981E7F800471B81 /* CategoryController.swift in Sources */,
 			);
