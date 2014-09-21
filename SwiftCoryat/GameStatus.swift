@@ -23,4 +23,6 @@ class GameStatus {
     var slowReluctantNoAnswer: Int = 0
     
     var finalJeopardyCorrect: Bool = true
+    
+    var gameDate = NSDate()
 }
