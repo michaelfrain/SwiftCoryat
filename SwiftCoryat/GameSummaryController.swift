@@ -10,5 +10,10 @@ import Foundation
 import UIKit
 
 class GameSummaryController: UIViewController {
-    
+    @IBOutlet var summaryTitleLabel: UILabel!
+    @IBOutlet var coryatScoreLabel: UILabel!
+    @IBOutlet var gameRecordLabel: UILabel!
+    @IBOutlet var battingAverageLabel: UILabel!
+    @IBOutlet var dailyDoubleLabel: UILabel!
+    @IBOutlet var finalJeopardyLabel: UILabel!
 }

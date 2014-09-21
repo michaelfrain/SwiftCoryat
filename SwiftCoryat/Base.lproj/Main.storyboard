@@ -697,10 +697,10 @@
             </objects>
             <point key="canvasLocation" x="1711" y="472"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Summary Controller-->
         <scene sceneID="7qJ-vE-AyF">
             <objects>
-                <viewController id="FLx-EG-7Pd" sceneMemberID="viewController">
+                <viewController id="FLx-EG-7Pd" customClass="GameSummaryController" customModule="SwiftCoryat" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="koV-LG-hUW"/>
                         <viewControllerLayoutGuide type="bottom" id="S7f-mY-XaB"/>
@@ -748,6 +748,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1150754905" green="0.034277653370000001" blue="0.83727496599999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="battingAverageLabel" destination="qUG-Ix-M0w" id="4C7-Jy-jKK"/>
+                        <outlet property="coryatScoreLabel" destination="tkY-z0-pxj" id="31M-9r-hfl"/>
+                        <outlet property="dailyDoubleLabel" destination="Fhs-QT-GYC" id="lpZ-rA-ZOw"/>
+                        <outlet property="finalJeopardyLabel" destination="jmd-Um-tU6" id="GXs-qc-Qgs"/>
+                        <outlet property="gameRecordLabel" destination="wUH-UJ-VhN" id="w77-vc-R8d"/>
+                        <outlet property="summaryTitleLabel" destination="D3Z-DC-ZoE" id="DgW-Sr-54x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJd-DO-wX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
