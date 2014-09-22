@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-No-3AI">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-No-3AI">
                                 <rect key="frame" x="0.0" y="44" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="428696514.51892698">
                                     <!--2014-08-02 18:21:54 +0000-->
@@ -26,8 +26,23 @@
                                     <!--1984-01-01 11:00:00 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xF7-Df-yxJ">
+                                <rect key="frame" x="267" y="6" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0g2-H6-VdB" firstAttribute="top" secondItem="QXa-No-3AI" secondAttribute="bottom" id="0IA-Zo-mCv"/>
+                            <constraint firstItem="xF7-Df-yxJ" firstAttribute="trailing" secondItem="OOL-0F-rwY" secondAttribute="trailingMargin" id="7X9-HM-y1m"/>
+                            <constraint firstItem="xF7-Df-yxJ" firstAttribute="top" secondItem="hl2-AM-aFJ" secondAttribute="bottom" constant="-14" id="7db-Ay-rbJ"/>
+                            <constraint firstItem="QXa-No-3AI" firstAttribute="top" secondItem="hl2-AM-aFJ" secondAttribute="bottom" constant="24" id="T8x-BQ-RZv"/>
+                            <constraint firstItem="QXa-No-3AI" firstAttribute="top" secondItem="xF7-Df-yxJ" secondAttribute="bottom" constant="8" id="gSL-me-rJd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QXa-No-3AI" secondAttribute="trailing" constant="-16" id="hDv-11-EOZ"/>
+                            <constraint firstItem="QXa-No-3AI" firstAttribute="leading" secondItem="OOL-0F-rwY" secondAttribute="leadingMargin" constant="-16" id="vRf-67-n6m"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="260"/>
