@@ -18,7 +18,7 @@ class GameBoardController: UIViewController, UICollectionViewDelegate {
     var roundNumber = 1
     var selectedCell: NSIndexPath!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         categoryArray = []
         super.init(coder: aDecoder)
     }
@@ -84,8 +84,8 @@ class GameBoardController: UIViewController, UICollectionViewDelegate {
     }
     
     var selectedClue: Int = 0
-    func collectionView(collectionView: UICollectionView!, didSelectItemAtIndexPath indexPath: NSIndexPath!) {
-        var gameBoardCell = collectionView.cellForItemAtIndexPath(indexPath) as GameBoardCell
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let gameBoardCell = collectionView.cellForItemAtIndexPath(indexPath) as! GameBoardCell
         if gameBoardCell.alreadySelected == true {
             return
         }
@@ -137,20 +137,20 @@ class GameBoardController: UIViewController, UICollectionViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "CellSelectionSegue" {
-            var destinationController: ResultController = segue.destinationViewController as ResultController
+            let destinationController: ResultController = segue.destinationViewController as! ResultController
             destinationController.gameStatus = self.gameStatus
             destinationController.currentClueValue = selectedClue
             destinationController.cellIndexPath = selectedCell
         } else if segue.identifier == "FinalJeopardySegue" {
-            var destinationController: FinalJeopardyController = segue.destinationViewController as FinalJeopardyController
+            let destinationController: FinalJeopardyController = segue.destinationViewController as! FinalJeopardyController
             destinationController.finalStatus = gameStatus
         }
     }
     
     @IBAction func unwindConfirmedClueResult(sender: UIStoryboardSegue!) {
-        var sourceController = sender.sourceViewController as ResultController
-        var previousCellIndex = sourceController.cellIndexPath
-        var previousCell = gameBoard.cellForItemAtIndexPath(previousCellIndex) as GameBoardCell
+        let sourceController = sender.sourceViewController as! ResultController
+        let previousCellIndex = sourceController.cellIndexPath
+        let previousCell = gameBoard.cellForItemAtIndexPath(previousCellIndex) as! GameBoardCell
         if sourceController.result == ResultController.LastResult.Correct {
             previousCell.cellValueLabel.textColor = UIColor.greenColor()
         } else if sourceController.result == ResultController.LastResult.Incorrect {
@@ -164,9 +164,9 @@ class GameBoardController: UIViewController, UICollectionViewDelegate {
     }
     
     @IBAction func unwindCanceledClueResult(sender: UIStoryboardSegue!) {
-        var sourceController = sender.sourceViewController as ResultController
-        var previousCellIndex = sourceController.cellIndexPath
-        var previousCell = gameBoard.cellForItemAtIndexPath(previousCellIndex) as GameBoardCell
+        let sourceController = sender.sourceViewController as! ResultController
+        let previousCellIndex = sourceController.cellIndexPath
+        let previousCell = gameBoard.cellForItemAtIndexPath(previousCellIndex) as! GameBoardCell
         previousCell.cellValueLabel.enabled = true
     }
     

@@ -29,7 +29,7 @@ class GameTypeController: UIViewController, UIPickerViewDataSource, UIPickerView
         return GameTypes.NumberOfTypes.hashValue
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         var typeName: String
         switch row {
         case GameTypes.RegularPlay.hashValue:

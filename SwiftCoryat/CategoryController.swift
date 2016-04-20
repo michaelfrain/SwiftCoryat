@@ -19,7 +19,7 @@ class CategoryController: UIViewController, UITextFieldDelegate {
     var isRound2 = false
     var gameStatus = GameStatus()
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -37,26 +37,26 @@ class CategoryController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     
-    func textFieldDidEndEditing(textField: UITextField!) {
+    func textFieldDidEndEditing(textField: UITextField) {
         switch textField {
         case cat1TextField:
-            categoryArray[0] = cat1TextField.text.capitalizedString
+            categoryArray[0] = cat1TextField.text!.capitalizedString
         case cat2TextField:
-            categoryArray[1] = cat2TextField.text.capitalizedString
+            categoryArray[1] = cat2TextField.text!.capitalizedString
         case cat3TextField:
-            categoryArray[2] = cat3TextField.text.capitalizedString
+            categoryArray[2] = cat3TextField.text!.capitalizedString
         case cat4TextField:
-            categoryArray[3] = cat4TextField.text.capitalizedString
+            categoryArray[3] = cat4TextField.text!.capitalizedString
         case cat5TextField:
-            categoryArray[4] = cat5TextField.text.capitalizedString
+            categoryArray[4] = cat5TextField.text!.capitalizedString
         case cat6TextField:
-            categoryArray[5] = cat6TextField.text.capitalizedString
+            categoryArray[5] = cat6TextField.text!.capitalizedString
         default:
             return
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         switch textField {
         case cat1TextField:
             cat2TextField.becomeFirstResponder()
@@ -78,7 +78,7 @@ class CategoryController: UIViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "BeginGameSegue" {
-            var gameBoardController = segue.destinationViewController as GameBoardController
+            let gameBoardController = segue.destinationViewController as! GameBoardController
             gameBoardController.categoryArray = categoryArray
             if isRound2 == false {
                 gameBoardController.roundNumber = 1
@@ -91,7 +91,7 @@ class CategoryController: UIViewController, UITextFieldDelegate {
     
     @IBAction func unwindForRound2(sender: UIStoryboardSegue!) {
         isRound2 = true
-        var sourceController = sender.sourceViewController as GameBoardController
+        let sourceController = sender.sourceViewController as! GameBoardController
         gameStatus = sourceController.gameStatus
     }
 }

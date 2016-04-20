@@ -16,9 +16,9 @@ class GameBoardCell: UICollectionViewCell {
     @IBOutlet  var cellValueLabel: UILabel! = UILabel()
     
     class func cellForCollectionView(collectionView: UICollectionView, indexPath: NSIndexPath, cellValue: NSString) -> GameBoardCell {
-        var newCell: GameBoardCell = collectionView.dequeueReusableCellWithReuseIdentifier("GameBoardCell", forIndexPath: indexPath) as GameBoardCell
+        let newCell: GameBoardCell = collectionView.dequeueReusableCellWithReuseIdentifier("GameBoardCell", forIndexPath: indexPath) as! GameBoardCell
         
-        newCell.cellValueLabel.text = cellValue
+        newCell.cellValueLabel.text = cellValue as String
         
         return newCell as GameBoardCell
     }

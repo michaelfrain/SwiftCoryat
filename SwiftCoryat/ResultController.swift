@@ -40,7 +40,7 @@ class ResultController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        clueResultSegmentedControl?.addTarget(self, action:Selector.convertFromStringLiteral("clueResultSelected:"), forControlEvents: UIControlEvents.ValueChanged)
+        clueResultSegmentedControl?.addTarget(self, action:#selector(ResultController.clueResultSelected(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.currentScoreLabel.text = "Current total: $\(gameStatus.currentScore)"
         self.currentClueLabel.text = "Current clue: $\(currentClueValue)"
         self.newScoreLabel.hidden = true
@@ -101,26 +101,26 @@ class ResultController: UIViewController {
             switch clueResultSegmentedControl!.selectedSegmentIndex {
             case 0:
                 gameStatus.currentScore += currentClueValue
-                gameStatus.correctResponses++
+                gameStatus.correctResponses += 1
                 if dailyDoubleSwitch?.on == true {
-                    gameStatus.dailyDoubleRight++
+                    gameStatus.dailyDoubleRight += 1
                 }
                 if tripleStumperSwitch?.on == true {
                     gameStatus.lachTrashPickedUp += currentClueValue
                 }
                 if slowReluctantSwitch?.on == true {
-                    gameStatus.slowReluctantRight++
+                    gameStatus.slowReluctantRight += 1
                 }
             case 1:
                 if dailyDoubleSwitch?.on == false {
                     gameStatus.currentScore -= currentClueValue
-                    gameStatus.incorrectResponses++
+                    gameStatus.incorrectResponses += 1
                 } else {
-                    gameStatus.nonResponses++
-                    gameStatus.dailyDoubleWrong++
+                    gameStatus.nonResponses += 1
+                    gameStatus.dailyDoubleWrong += 1
                 }
             default:
-                gameStatus.nonResponses++
+                gameStatus.nonResponses += 1
             }
         }
     }
